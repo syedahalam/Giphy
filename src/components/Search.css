@@ -71,6 +71,10 @@ input:hover {
   background-color: var(--secondary);
   outline: 0;
 }
+img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
 
 /* Apply flex to the form */
 .form-horizontal {
@@ -85,5 +89,20 @@ the button and input when the browser is at least
   button + button,
   input + button {
     margin-left: 1rem;
+  }
+  .gallery{
+  column-count: 3;
+}
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gallery {
+    column-count: 4;
   }
 }
