@@ -1,7 +1,8 @@
 import React from 'react';
 import './Search.css'
 
-const SearchResults = ({images}) => {
+const SearchResults = (props) => {
+    const {images}=props;
     //return early if there are no images
     if(!images.length){
         return <h2>No Images Found!</h2>
@@ -11,7 +12,7 @@ const SearchResults = ({images}) => {
             {images.map(image =>(
                 <div key={image.id}
                 className='gif'>
-                    <img src={image.url} alt='images'/>
+                    <img src={image.images.downsized_large.url} alt={image.title}/>
                 </div>
             ))}
         </div>

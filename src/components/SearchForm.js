@@ -1,16 +1,24 @@
 import React from 'react';
 import './Search.css'
+import { SearchIcon } from '../shared/AppIcons'
 
-const SearchForm = () => {
+const SearchForm = (handleSubmit, handleChange, searchString) => {
     return (
         <div>
-           <form className='form-horizontal'>
-               <input placeholder='Search'
-                      type='text'
-                      name='searchString'
-                      required
+           <form 
+           onSubmit={handleSubmit} 
+           className='form-horizontal'>
+               <input 
+                    placeholder='Search'
+                    type='text'
+                    name='searchString'
+                    required
+                    onChange={handleChange}
+                    value={searchString}
                 />
-                <button type='submit'>Search</button>
+                <button type='submit'>
+                    <SearchIcon height='2rem' width='2rem' />
+                </button>
            </form>
         </div>
 
