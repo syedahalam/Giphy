@@ -2,7 +2,7 @@ import React from 'react';
 import './Search.css'
 import { SearchIcon } from '../shared/AppIcons'
 
-const SearchForm = (handleSubmit, handleChange, searchString) => {
+const SearchForm = ({handleSubmit, handleChange, searchString}) => {
     return (
         <div>
            <form 

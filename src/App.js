@@ -51,7 +51,7 @@ const searchOptions = {
 };
 
 const [images, setImages] = useState([]);
-const [searchString, setSearchString] = useState('minions');
+const [searchString, setSearchString] = useState('shang chi');
 const [lastSearch, setLastSearch] = useState('');
 
 useEffect(()=> {
@@ -67,7 +67,7 @@ function getImages(searchString){
       console.log(response.data)
       setImages(response.data);
       setLastSearch(searchString);
-      setSearchString('');
+      setSearchString(searchString);
     })
     .catch(console.error)
     
@@ -77,7 +77,7 @@ function getImages(searchString){
  }
  function handleSubmit(event){
    event.preventDefault();
-   getImages();
+   getImages(searchString);
  }
   
 
